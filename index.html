@@ -18,49 +18,51 @@
       }
     </style>
   </head>
-
-
-<link rel="stylesheet" href="./twotone/css/twotone.png.min.css">
-
-<div class="material-home"></div> Home
-
-<!--
   <body>
     <script>
       /* eslint-disable indent, eol-last, no-multiple-empty-lines, no-trailing-spaces */
+      var settings = {
+        type: 'svg',
+        style: 'baseline'
+      };
       window.changeSize = function (event) {
         var size = event.target.value + 'px';
         document.getElementById('size').style.fontSize = size;
         document.getElementById('current-size').innerHTML = size;
       };
       window.changeStyle = function (event) {
-        var style = event.target.value;
-        document.getElementById('style').innerHTML = '<link rel="stylesheet" href="./' + style + '/css/' + style + '.png.min.css">';
+        settings.style = event.target.value;
+        document.getElementById('style').innerHTML = '<link rel="stylesheet" href="./' + settings.style + '/css/' + settings.style + '.' + settings.type + '.min.css">';
+      };
+      window.changeType = function (event) {
+        settings.type = event.target.value;
+        document.getElementById('style').innerHTML = '<link rel="stylesheet" href="./' + settings.style + '/css/' + settings.style + '.' + settings.type + '.min.css">';
       };
     </script>
     <div>
       <div class="col">
         <label>
-          Size<br>
+          <strong>Size</strong><br>
           <input type="range" min="6" max="96" onchange="window.changeSize(event)" oninput="window.changeSize(event)">
           <div id="current-size">24px</div>
         </label>
       </div>
-      <div class="col">
+      <div class="col" style="padding-right: 8px">
+        <strong>Style</strong>
         <label>
-          <input name="style" type="radio" value="baseline" onchange="window.changeStyle(event)">
+          <input name="style" type="radio" value="baseline" checked onchange="window.changeStyle(event)">
           Baseline <span class="grey">(Filled)</span>
         </label>
         <label>
           <input name="style" type="radio" value="outline" onchange="window.changeStyle(event)">
           Outline <span class="grey">(Outlined)</span>
         </label>
+      </div>
+      <div class="col">
         <label>
           <input name="style" type="radio" value="round" onchange="window.changeStyle(event)">
           Round <span class="grey">(Rounded)</span>
         </label>
-      </div>
-      <div class="col">
         <label>
           <input name="style" type="radio" value="twotone" onchange="window.changeStyle(event)">
           Two-Tone
@@ -70,9 +72,20 @@
           Sharp
         </label>
       </div>
+      <div class="col">
+        <strong>Type</strong>
+        <label>
+          <input name="type" type="radio" value="svg" checked onchange="window.changeType(event)">
+          svg
+        </label>
+        <label>
+          <input name="type" type="radio" value="png" onchange="window.changeType(event)">
+          png
+        </label>
+      </div>
     </div>
     <div id="style">
-      <link rel="stylesheet" href="./baseline/css/baseline.png.min.css">
+      <link rel="stylesheet" href="./baseline/css/baseline.svg.min.css">
     </div>
     <div id="size" style="font-size: 24px">
       <span class="material-360"></span>
@@ -1119,6 +1132,6 @@
       <span class="material-zoom_in"></span>
       <span class="material-zoom_out"></span>
       <span class="material-zoom_out_map"></span>
-    </div> -->
+    </div>
   </body>
 </html>
