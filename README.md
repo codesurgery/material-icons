@@ -27,7 +27,7 @@ Things you can do with this:
 
 ### Basic usage
 
-```
+```html
 <!-- Load stylesheet, which will use the relevant image assets -->
 <link rel="stylesheet" href="https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.svg.min.css">
 
@@ -37,18 +37,15 @@ Things you can do with this:
 
 > ![](example.png);
 
-(Explanation)  
 Just add the class `material-X` to a div or span.  
 X can be any of the icon names found on [this page](https://material.io/tools/icons).
-
-Warning: I'm not 100% sure that Google has made every icon for every style available 🤷‍♀
 
 ### URLs
 
 **SVGs**
 
 Style | URL
-:---:|:---:
+:---|:---
 Baseline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/baseline/css/baseline.svg.min.css
 Outline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/outline/css/outline.svg.min.css
 Round | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/round/css/round.svg.min.css
@@ -58,7 +55,7 @@ Sharp | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/sha
 **PNGs**
 
 Style | URL
-:---:|:---:
+:----|:----
 Baseline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/baseline/css/baseline.png.min.css
 Outline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/outline/css/outline.png.min.css
 Round | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/round/css/round.png.min.css
