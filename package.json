@@ -7,5 +7,8 @@
     "name": "Tom Golden",
     "url": "http://tbjgolden.com"
   },
-  "license": "CC0-1.0"
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }]
 }
