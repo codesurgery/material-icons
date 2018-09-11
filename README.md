@@ -64,3 +64,5 @@ Two-Tone | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/
 Sharp | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/sharp/css/sharp.png.min.css
 
 If you find the project useful show your support by giving the repo a star 💙
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
