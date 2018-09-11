@@ -1,5 +1,7 @@
 # Material Design Icons v2 (2018)
 
+![](icons.png)
+
 Google released it's new sexy set of icons [here](https://material.io/tools/icons),
 but they haven't updated their Github repo with them.
 
@@ -33,7 +35,7 @@ Things you can do with this:
 <div class="material-home"></div> Home
 ```
 
-> ![](./example.png);
+> ![](example.png);
 
 (Explanation)  
 Just add the class `material-X` to a div or span.  
