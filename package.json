@@ -1,0 +1,11 @@
+{
+  "name": "material-design-icons-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": {
+    "name": "Tom Golden",
+    "url": "http://tbjgolden.com"
+  },
+  "license": "CC0-1.0"
+}
