@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Bounding_Boxes">
-	<g id="ui_x5F_spec_x5F_header_copy_2">
-	</g>
-	<path fill="none" d="M0,0h24v24H0V0z"/>
-</g>
-<g id="Outline" fill="currentColor">
-	<g id="ui_x5F_spec_x5F_header">
-	</g>
-	<path d="M0,15h2V9H0V15z M3,17h2V7H3V17z M22,9v6h2V9H22z M19,17h2V7h-2V17z M16.5,3h-9C6.67,3,6,3.67,6,4.5v15
-		C6,20.33,6.67,21,7.5,21h9c0.83,0,1.5-0.67,1.5-1.5v-15C18,3.67,17.33,3,16.5,3z M16,19H8V5h8V19z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><g fill="currentColor"><path d="M0 15h2V9H0v6zm3 2h2V7H3v10zm19-8v6h2V9h-2zm-3 8h2V7h-2v10zM16.5 3h-9C6.67 3 6 3.67 6 4.5v15c0 .83.67 1.5 1.5 1.5h9c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5zM16 19H8V5h8v14z"/></g></svg>
