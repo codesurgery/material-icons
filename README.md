@@ -25,7 +25,7 @@ Things you can do with this:
 
 ### Basic usage
 
-```
+```html
 <!-- Load stylesheet, which will use the relevant image assets -->
 <link rel="stylesheet" href="https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.svg.min.css">
 
