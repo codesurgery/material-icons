@@ -17,34 +17,50 @@ All of the svgs have been properly compressed through [svgo](https://github.com/
 
 Things you can do with this:
 
-1. Use it as a cdn: see below.
+1. Use it as a cdn: [see below](#urls).
 2. Download all of the Material Design icons and go to town with them
 3. The svgs all have `fill="currentColor"` meaning that if you embed them
    into your HTML then it should match the containing element's text color,
-   and can be overridden.
+   and can be overridden. (If you're using React, paste them into [svgr](https://svgr.now.sh/))
 
 ### Basic usage
 
 ```
 <!-- Load stylesheet, which will use the relevant image assets -->
-<link rel="stylesheet" href="./twotone/css/twotone.png.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.svg.min.css">
 
-<!-- Now you can go wild -->
+<!-- Profit -->
 <div class="material-home"></div> Home
 ```
 
 > ![](./example.png);
 
-> (Explanation)  
-> Just add the class `material-X` to a div or span.  
-> X can be any of the icon names found on [this page](https://material.io/tools/icons).
-> 
-> I'm not 100% sure that Google (or I) have made every icon for every style available 🤷‍♀️
+(Explanation)  
+Just add the class `material-X` to a div or span.  
+X can be any of the icon names found on [this page](https://material.io/tools/icons).
+
+Warning: I'm not 100% sure that Google has made every icon for every style available 🤷‍♀
 
 ### URLs
 
-- ./baseline/css/baseline.png.min.css
-- ./outline/css/outline.png.min.css
-- ./round/css/round.png.min.css
-- ./sharp/css/sharp.png.min.css
-- ./twotone/css/twotone.png.min.css
+**SVGs**
+
+Style | URL
+:---:|:---:
+Baseline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/baseline/css/baseline.svg.min.css
+Outline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/outline/css/outline.svg.min.css
+Round | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/round/css/round.svg.min.css
+Two-Tone | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.svg.min.css
+Sharp | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/sharp/css/sharp.svg.min.css
+
+**PNGs**
+
+Style | URL
+:---:|:---:
+Baseline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/baseline/css/baseline.png.min.css
+Outline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/outline/css/outline.png.min.css
+Round | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/round/css/round.png.min.css
+Two-Tone | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.png.min.css
+Sharp | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/sharp/css/sharp.png.min.css
+
+If you find the project useful show your support by giving the repo a star 💙
