@@ -35,11 +35,8 @@ Things you can do with this:
 
 > ![](./example.png);
 
-(Explanation)  
 Just add the class `material-X` to a div or span.  
 X can be any of the icon names found on [this page](https://material.io/tools/icons).
-
-Warning: I'm not 100% sure that Google has made every icon for every style available 🤷‍♀
 
 ### URLs
 
