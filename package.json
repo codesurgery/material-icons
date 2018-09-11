@@ -1,7 +1,7 @@
 {
   "name": "material-design-icons-v2",
   "version": "1.0.0",
-  "description": "",
+  "description": "A usable CSS export of Google's newest iteration of the material design icons, updated for 2018.",
   "main": "index.js",
   "author": {
     "name": "Tom Golden",
