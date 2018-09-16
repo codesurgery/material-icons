@@ -29,7 +29,7 @@ Things you can do with this:
 
 ```html
 <!-- Load stylesheet, which will use the relevant image assets -->
-<link rel="stylesheet" href="https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.svg.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/twotone/css/twotone.svg.min.css">
 
 <!-- Profit -->
 <div class="material-home"></div> Home
@@ -46,20 +46,20 @@ X can be any of the icon names found on [this page](https://material.io/tools/ic
 
 Style | URL
 :---|:---
-Baseline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/baseline/css/baseline.svg.min.css
-Outline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/outline/css/outline.svg.min.css
-Round | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/round/css/round.svg.min.css
-Two-Tone | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.svg.min.css
-Sharp | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/sharp/css/sharp.svg.min.css
+Baseline | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/baseline/css/baseline.svg.min.css
+Outline | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/outline/css/outline.svg.min.css
+Round | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/round/css/round.svg.min.css
+Two-Tone | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/twotone/css/twotone.svg.min.css
+Sharp | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/sharp/css/sharp.svg.min.css
 
 **PNGs**
 
 Style | URL
 :----|:----
-Baseline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/baseline/css/baseline.png.min.css
-Outline | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/outline/css/outline.png.min.css
-Round | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/round/css/round.png.min.css
-Two-Tone | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/twotone/css/twotone.png.min.css
-Sharp | https://cdn.rawgit.com/codesurgery/material-design-icons-v2/a74a5fb7/sharp/css/sharp.png.min.css
+Baseline | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/baseline/css/baseline.png.min.css
+Outline | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/outline/css/outline.png.min.css
+Round | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/round/css/round.png.min.css
+Two-Tone | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/twotone/css/twotone.png.min.css
+Sharp | https://cdn.rawgit.com/codesurgery/material-icons/d6f62bcd/sharp/css/sharp.png.min.css
 
 If you find the project useful show your support by giving the repo a star 💙
