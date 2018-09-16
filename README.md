@@ -2,6 +2,10 @@
 
 ![](icons.png)
 
+Try them out here: http://codesurgery.io/material-icons/
+
+---
+
 Google released it's new sexy set of icons [here](https://material.io/tools/icons),
 but they haven't updated their Github repo with them.
 
