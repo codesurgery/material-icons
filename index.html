@@ -16,14 +16,47 @@
       body {
         font-family: sans-serif;
       }
+      #code {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        padding: 12px 18px;
+        background-color: #eee;
+      }
+      #size > #div-a::before {
+        padding: 16px 0 0;
+        display: inline-block;
+        content: 'No matches found.';
+      }
+      #size > #div-a + #div-b {
+        display: none;
+      }
+      #size > :not(span[style]) ~ #div-a::before {
+        content: none;
+      }
+      #size > :not([style*="none"]) ~ #div-a::before {
+        content: none;
+      }
+      #size > :not(span[style]) ~ #div-a + #div-b {
+        display: block;
+      }
+      #size > :not([style*="none"]) ~ #div-a + #div-b {
+        display: block;
+      }
+      .other {
+        font-size: 18px;
+      }
     </style>
   </head>
   <body>
     <script>
       /* eslint-disable indent, eol-last, no-multiple-empty-lines, no-trailing-spaces */
+      /* globals Levenshtein */
       var settings = {
         type: 'svg',
-        style: 'baseline'
+        style: 'baseline',
+        query: ''
       };
       window.changeSize = function (event) {
         var size = event.target.value + 'px';
@@ -38,8 +71,77 @@
         settings.type = event.target.value;
         document.getElementById('style').innerHTML = '<link rel="stylesheet" href="./' + settings.style + '/css/' + settings.style + '.' + settings.type + '.min.css">';
       };
+      window.addEventListener('DOMContentLoaded', function () {
+        var debounce = null;
+        var materialEls = document.querySelectorAll('#size > [class^="material"]');
+        var codeEl = document.getElementById('code');
+        var codeClassEl = document.getElementById('code-class');
+        var icons = [];
+        materialEls.forEach(function (el) {
+          var className = el.getAttribute('class');
+          el.addEventListener('mouseover', function () {
+            codeEl.style.opacity = '0.9';
+            codeClassEl.innerHTML = className;
+          });
+          icons.push([className.substring(9).replace(/_/g, ' '), el]);
+        });
+        window.search = function (event) {
+          clearTimeout(debounce);
+          debounce = setTimeout(function () {
+            var string = event.target.value.trim().toLowerCase();
+            if (settings.query === string) return;
+            settings.query = string;
+            var levMax = Math.floor(Math.sqrt(string.length + 0.001));
+            icons.forEach(function (pair) {
+              pair[1].style.display = 'none';
+            });
+            var matches = [[], [], [], [], []];
+            var regex = new RegExp('(?:^|\\b)' + string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+
+            icons.forEach(function (pair) {
+              if (string === pair[0]) {
+                matches[0].push(pair[1]);
+              } else if (regex.test(pair[0])) {
+                matches[1].push(pair[1]);
+              } else if (~string.indexOf(pair[0])) {
+                matches[2].push(pair[1]);
+              } else if (Levenshtein.get(pair[0].substring(0, string.length), string) < levMax) {
+                matches[3].push(pair[1]);
+              } else {
+                matches[4].push(pair[1]);
+              }
+            });
+
+            matches[0].forEach(function (el) {
+              el.style.display = 'inline-block';
+              el.style.order = '1';
+            });
+
+            document.getElementById('div-a').style.order = '2';
+
+            matches[1].forEach(function (el) {
+              el.style.display = 'inline-block';
+              el.style.order = '3';
+            });
+
+            document.getElementById('div-b').style.order = '4';
+
+            matches[2].forEach(function (el) {
+              el.style.display = 'inline-block';
+              el.style.order = '5';
+            });
+
+            document.getElementById('div-c').style.order = '6';
+
+            matches[3].forEach(function (el) {
+              el.style.display = 'inline-block';
+              el.style.order = '7';
+            });
+          }, 250);
+        };
+      });
     </script>
-    <div>
+    <div style="padding-top: 80px;">
       <div class="col">
         <label>
           <strong>Size</strong><br>
@@ -83,11 +185,17 @@
           png
         </label>
       </div>
+      <div class="col">
+        <strong>Search</strong>
+        <label>
+          <input name="type" type="text" value="" placeholder="e.g. thumbs up" onkeyup="window.search(event)">
+        </label>
+      </div>
     </div>
     <div id="style">
       <link rel="stylesheet" href="./baseline/css/baseline.svg.min.css">
     </div>
-    <div id="size" style="font-size: 24px">
+    <div id="size" style="font-size: 24px; display: flex; flex-wrap: wrap; border: solid #ccc; border-width: 1px 0; padding: 8px 0;">
       <span class="material-360"></span>
       <span class="material-3d_rotation"></span>
       <span class="material-4k"></span>
@@ -1132,6 +1240,15 @@
       <span class="material-zoom_in"></span>
       <span class="material-zoom_out"></span>
       <span class="material-zoom_out_map"></span>
+      <div class="other" id="div-a" style="border-top: 1px solid #ccc; min-width: 100%; margin: 8px 0;"></div>
+      <div class="other" id="div-b" style="border-top: 1px solid #ccc; min-width: 100%; margin: 8px 0;"></div>
+      <div class="other" id="div-c" style="border-top: 1px solid #ccc; min-width: 100%; margin: 8px 0;"></div>
+      <div class="other" id="code" style="opacity: 0; line-height: .8;"><code>&lt;span class="<span id="code-class" style="font-weight: bold;"></span>"&gt;&lt;/span&gt;</code></div>
     </div>
+    <script>
+      /* eslint-disable */
+      /*! fast-levenshtein 2016-12-27. Copyright Ramesh Nair <ram@hiddentao.com> (http://www.hiddentao.com/) */
+      !function(){"use strict";var a;try{a="undefined"!=typeof Intl&&"undefined"!=typeof Intl.Collator?Intl.Collator("generic",{sensitivity:"base"}):null}catch(b){console.log("Collator could not be initialized and wouldn't be used")}var c=[],d=[],e={get:function(b,e,f){var g=f&&a&&f.useCollator,h=b.length,i=e.length;if(0===h)return i;if(0===i)return h;var j,k,l,m,n;for(l=0;i>l;++l)c[l]=l,d[l]=e.charCodeAt(l);c[i]=i;var o;if(g)for(l=0;h>l;++l){for(k=l+1,m=0;i>m;++m)j=k,o=0===a.compare(b.charAt(l),String.fromCharCode(d[m])),k=c[m]+(o?0:1),n=j+1,k>n&&(k=n),n=c[m+1]+1,k>n&&(k=n),c[m]=j;c[m]=k}else for(l=0;h>l;++l){for(k=l+1,m=0;i>m;++m)j=k,o=b.charCodeAt(l)===d[m],k=c[m]+(o?0:1),n=j+1,k>n&&(k=n),n=c[m+1]+1,k>n&&(k=n),c[m]=j;c[m]=k}return k}};"undefined"!=typeof define&&null!==define&&define.amd?define(function(){return e}):"undefined"!=typeof module&&null!==module&&"undefined"!=typeof exports&&module.exports===exports?module.exports=e:"undefined"!=typeof self&&"function"==typeof self.postMessage&&"function"==typeof self.importScripts?self.Levenshtein=e:"undefined"!=typeof window&&null!==window&&(window.Levenshtein=e)}();
+    </script>
   </body>
 </html>
